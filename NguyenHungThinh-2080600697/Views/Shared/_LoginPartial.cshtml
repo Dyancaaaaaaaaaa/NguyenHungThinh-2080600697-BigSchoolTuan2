@@ -4,7 +4,23 @@
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
+    
+        <ul class="navbar-nav navbar-right">
+            <liv class="dropdown">
+                <a href="#" class"dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @User.Identity.GetUserName()
+                    <span class="caret"> </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <liv><a href="#">Course I'm Going </a> </liv>
+                    <liv><a href="#">Lecturer I'm Flowing </a> </liv>
+                    <liv><a role="separator" class="divider"> </a> </liv>
+                    <br />
+                    <liv><a href="javascript:document.getElementById('logoutForm').submit"> Log off</a> </liv>
 
+                </ul>
+
+            </liv>
+        </ul>
     <ul class="navbar-nav navbar-right">
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class="nav-link" })

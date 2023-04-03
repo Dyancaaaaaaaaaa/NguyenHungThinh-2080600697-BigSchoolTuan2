@@ -10,6 +10,9 @@ namespace NguyenHungThinh_2080600697.ViewModels
 {
     public class CourseViewModel
     {
+        internal List<Course> UpcommingCourses;
+        internal bool ShowAction;
+
         [Required]
         public string Place { get; set; }
         [Required]
